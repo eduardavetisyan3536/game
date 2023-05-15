@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+img{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul, ol{
+    list-style: none;
+}
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.clear::after{
+    content: '';
+    clear: both;
+    display: block;
+}
