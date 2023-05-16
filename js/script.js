@@ -44,28 +44,28 @@ window.addEventListener("load", function () {
             case 'rr':
             case 'ss':
             case 'pp':
-                res.innrText = 'Draw!';
+                res.innerText = 'Draw!';
                 sound.setAttribute('src', 'audio/draw.mp3');
                 sound.play();
                 break;
             case 'rs':
             case 'sp':
             case 'pr':
-                res.innrText = 'You Won!';
+                res.innerText = 'You Won!';
                 sound.setAttribute('src', 'audio/win.mp3');
                 sound.play();
                 countU++;
-                countUser.innrText = countU;
+                countUser.innerText = countU;
                 compField.querySelector('[data-field = ' + compStep + ']').classList.add('error');
                 break;
             case 'sr':
             case 'ps':
             case 'rp':
-                res.innrText = 'Won The Computer!';
+                res.innerText = 'Won The Computer!';
                 sound.setAttribute('src', 'audio/loss.mp3');
                 sound.play();
                 countC++;
-                countComp.innrText = countC;
+                countComp.innerText = countC;
                 userField.querySelector('[data-field = ' + userStep + ']').classList.add('error');
                 break;
         }
@@ -73,9 +73,9 @@ window.addEventListener("load", function () {
 
     function playGame() {
         countU = countC = 0
-        res.innrText = 'Make A Choice';
-        countUser.innrText = '0'
-        countComp.innrText = '0';
+        res.innerText = 'Make A Choice';
+        countUser.innerText = '0'
+        countComp.innerText = '0';
         fields.forEach(item => item.classList.remove('active', 'error'))
     }
     play.addEventListener("click", playGame);
